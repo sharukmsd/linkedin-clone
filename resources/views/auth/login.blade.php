@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+    @if(auth()->user())
+        <script>window.location = "/home";</script>
+    @endif
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
