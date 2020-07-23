@@ -1,0 +1,10 @@
+body{
+    background-color: #F5F5F5;
+}
+.two-line{
+    -webkit-line-clamp: 2;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
