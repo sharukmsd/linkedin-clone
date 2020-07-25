@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Post;
-use App\User;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -13,13 +12,20 @@ class PostController extends Controller
     public function create(Request $request)
     {
     }
-    public function store(){
-        $post = new Post();
 
-        $post->body = request('body');
+    public function store()
+    {
 
-        var_dump($post);
+        $validatedAttr = request()->validate([
+            'body' => 'required'
+        ]);
 
-        return redirect()->back();
+        Post::create([
+                'user_id' => auth()->id(),
+                'body' => $validatedAttr['body']
+            ]
+        );
+
+        return redirect('/home');
     }
 }

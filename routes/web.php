@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::post('/post', 'PostController@store');
+Route::post('/publishes', 'PostController@store');
 
 Auth::routes();
 

@@ -9,7 +9,11 @@
             @include('_feed')
         </div>
         <div class="col-md-3">
-            @include('_rightSideBar')
+            @foreach($users as $user)
+                @if(!(auth()->user()->isFollowing($user)))
+                    @include('_rightSideBar')
+                @endif
+            @endforeach
         </div>
     </div>
 @endsection
