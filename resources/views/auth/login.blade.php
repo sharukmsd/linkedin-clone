@@ -5,6 +5,9 @@
         <script>window.location = "/home";</script>
     @endif
 
+    @section('loginHeader')
+        @include('layouts.loginHeader')
+    @endsection
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

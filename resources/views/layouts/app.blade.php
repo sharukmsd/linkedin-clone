@@ -23,12 +23,12 @@
 </head>
 <body>
 <div id="app">
-    <section class="px-5">
-        <header class="py-md-2 container mx-auto">
-            <a href="{{route('home')}}">
-                <img src="/images/logo.png">
-            </a>
-        </header>
+    <section class="">
+
+                @yield('loginHeader')
+                @yield('Header')
+
+
     </section>
 
     <section class="px-5">

@@ -21,6 +21,6 @@ Route::post('/publishes', 'PostController@store');
 
 Auth::routes();
 
-Route::get('/profiles/{user}', 'ProfileController@show')->name('profile');
+Route::get('/profiles/{user}', 'ProfileController@show')->name('profile')->middleware('auth');;
 
 Route::get('/home', 'HomeController@index')->name('home');

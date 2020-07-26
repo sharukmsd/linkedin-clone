@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
+@section('Header')
+    @include('layouts.header')
+@endsection
+
 @section('content')
+
     <div class="row">
         <div class="col-md-2">
             @include('_leftSideBar')
