@@ -25,7 +25,9 @@
 <div id="app">
     <section class="px-5">
         <header class="py-md-2 container mx-auto">
-            <img src="/images/logo.png">
+            <a href="{{route('home')}}">
+                <img src="/images/logo.png">
+            </a>
         </header>
     </section>
 
